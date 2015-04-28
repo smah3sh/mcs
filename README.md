@@ -34,20 +34,26 @@ a. Match weapon, date range, points range and elo_rating : (and (or weapons:'GUN
 
 Configuring the application
 1. Running tests and the application. Configure the properties
-
+```
 cloudsearch.domain.search.endpoint=
 cloudsearch.domain.document.endpoint=
 cloudsearch.connection.accesskey=
 cloudsearch.connection.secretkey=
-
-the the files
-
+```
+in the the files
+```
 a. main/.../resources/application.properties
 b. test/.../resources/application.properties
-
+```
 2. Setup VM parameters to run this as an application
--DCLOUDSEARCH.DOMAIN.SEARCH.ENDPOINT=<aws-search-endpoint> -DCLOUDSEARCH.DOMAIN.DOCUMENT.ENDPOINT=<aws-document-endpoint> -DCLOUDSEARCH.CONNECTION.ACCESSKEY=<aws-access-key> -DCLOUDSEARCH.CONNECTION.SECRETKEY=<aws-secret-key>
-
+```
+-DCLOUDSEARCH.DOMAIN.SEARCH.ENDPOINT=<aws-search-endpoint>
+-DCLOUDSEARCH.DOMAIN.DOCUMENT.ENDPOINT=<aws-document-endpoint> 
+-DCLOUDSEARCH.CONNECTION.ACCESSKEY=<aws-access-key> 
+-DCLOUDSEARCH.CONNECTION.SECRETKEY=<aws-secret-key>
+```
 c. Launch and run through browser or REST client
+```
 http://localhost:8025/mcs/v1/matchmaker?query={"queryString":"(and (or weapons:'GUN' weapons:'CANNON' weapons:'DRONE')(and last_login:['2013-05-25T00:00:00Z','2014-10-25T00:00:00Z'])(and points:[100, 200])(and elo_rating:[1000, 2000]))","facets":"{\"weapons\":{\"sort\":\"count\",\"size\":5},\"points\":{\"buckets\":[\"[0,100]\",\"[101,200]\",\"[201,300]\",\"[301,400]\",\"[401,}\"]}}","cursor":"initial","numRecordsToReturn":10}
+```
 
