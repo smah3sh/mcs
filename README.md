@@ -20,7 +20,7 @@ I created this project to create a simple matchmaker using AWS Cloudsearch. The 
 
 This application demonstates how to run simple and faceted queries using the "structured search"
 
-Requirements for using this project
+H3. Requirements for using this project
 
 1. Create a CloudSearch domain (https://docs.aws.amazon.com/cloudsearch/latest/developerguide/what-is-cloudsearch.html)
 2. Upload the src/main/conf/matchmaker.json file into Cloudsearch to be indexed. 
@@ -32,7 +32,8 @@ a. Match weapon, date range, points range and elo_rating : (and (or weapons:'GUN
 5. Determine AWS access key and secret key
 
 
-Configuring the application
+H3. Configuring the application
+
 1. Running tests and the application. Configure the properties
 ```
 cloudsearch.domain.search.endpoint=
