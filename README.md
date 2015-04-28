@@ -23,7 +23,7 @@ This application demonstates how to run simple and faceted queries using the "st
 Requirements for using this project
 
 1. Create a CloudSearch domain (https://docs.aws.amazon.com/cloudsearch/latest/developerguide/what-is-cloudsearch.html)
-2. Upload the matchmaker.json file into Cloudsearch to be indexed. 
+2. Upload the src/main/conf/matchmaker.json file into Cloudsearch to be indexed. 
 a. Select elo_rating, points, randomizer, last_login and weapons as fields that need to be indexed.
 b. This file will upload 5000 documents
 3. Run a test query to validate upload
