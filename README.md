@@ -1,5 +1,5 @@
 # mcs
-A simple matchmaking service based on AWS Cloudsearch
+A simple matchmaking service based on AWS Cloudsearch Java API.
 
 I created this project to create a simple matchmaker using AWS Cloudsearch. The matchmaker is used to find other users using a variety of search criteria listed under "fields" below.
 
