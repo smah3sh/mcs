@@ -1,0 +1,20 @@
+<configuration scan="true" scanPeriod="30 seconds">
+    <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>NS:%X{namespace} TID:%X{transactionId} %date [%level] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- <logger name="net.rubyeye.xmemcached.impl" level="info"/>
+    <logger name="com.google.code.yanf4j.core.impl" level="info"/>
+	<logger name="com.google.code.yanf4j.core.impl.AbstractSession" level="error"/>
+	<logger name="net.rubyeye.xmemcached.impl.MemcachedHandler" level="error"/>
+	<logger name="net.rubyeye.xmemcached.impl.Optimizer" level="error"/>
+
+	<logger name="com.codahale.STATS.graphite.GraphiteReporter" level="ERROR" /> -->
+
+    <root level="info">
+        <appender-ref ref="ConsoleAppender"/>
+    </root>
+</configuration>

@@ -1,0 +1,31 @@
+<configuration scan="true" scanPeriod="30 seconds">
+    <property name="LOGROOT" value="/var/log"/>
+    <property name="MODULENAME" value="mcs"/>
+    <property name="FILENAME" value="${LOGROOT}/${MODULENAME}/${MODULENAME}"/>
+    <jmxConfigurator/>
+
+    <appender name="MainAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${FILENAME}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${FILENAME}.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <!-- keep 14 days' worth of history -->
+            <maxHistory>14</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date [%level] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+         encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default
+        <encoder>
+            <pattern>%date [%level] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="ConsoleAppender"/>
+        <appender-ref ref="MainAppender"/>
+    </root>
+</configuration>
