@@ -20,7 +20,7 @@ I created this java+maven project to create a simple matchmaker using AWS Clouds
 
 This application demonstates how to run simple and faceted queries using the "structured search"
 
-###H3 Requirements for using this project
+### Requirements for using this project
 
 1. Create a CloudSearch domain (https://docs.aws.amazon.com/cloudsearch/latest/developerguide/what-is-cloudsearch.html)
 2. Upload the src/main/conf/matchmaker.json file into Cloudsearch to be indexed. 
@@ -32,7 +32,7 @@ a. Match weapon, date range, points range and elo_rating : (and (or weapons:'GUN
 5. Create AWS access key and secret key to access this service
 
 
-###H3 Configuring the application
+### Configuring the application
 
 1. Running tests and the application. Configure the properties
 ```
