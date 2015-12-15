@@ -24,10 +24,10 @@ This application demonstates how to run simple and faceted queries using the "st
 
 1. Create a CloudSearch domain (https://docs.aws.amazon.com/cloudsearch/latest/developerguide/what-is-cloudsearch.html)
 2. Upload the src/main/conf/matchmaker.json file into Cloudsearch to be indexed. 
-..* Select elo_rating, points, randomizer, last_login and weapons as fields that need to be indexed.
-..* This file will upload 5000 documents
+  1. Select elo_rating, points, randomizer, last_login and weapons as fields that need to be indexed.
+  2. This file will upload 5000 documents
 3. Run a test query to validate upload
-..* Match weapon, date range, points range and elo_rating : (and (or weapons:'GUN' weapons:'CANNON' weapons:'DRONE') (and last_login:['2013-05-25T00:00:00Z','2014-10-25T00:00:00Z']) (and points:[100, 200]) (and elo_rating:[1000, 2000]))
+  1. Match weapon, date range, points range and elo_rating : (and (or weapons:'GUN' weapons:'CANNON' weapons:'DRONE') (and last_login:['2013-05-25T00:00:00Z','2014-10-25T00:00:00Z']) (and points:[100, 200]) (and elo_rating:[1000, 2000]))
 4. Record the Cloudsearch document and search endpoints.
 5. Create AWS access key and secret key to access this service
 
